@@ -9,6 +9,8 @@ import { TestComponent } from './test/test.component';
 import { AdvanceComponent } from './advance/advance.component';
 import { EmployeeDetailComponent } from './employee-files/employee-detail.component';
 import { EmployeeService } from './employee-files/employee.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailComponent } from './department-files/department-detail.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { EmployeeService } from './employee-files/employee.service';
     TestComponent,
     EmployeeDetailComponent,
     routingComponents,
-    AdvanceComponent
+    AdvanceComponent,
+    PageNotFoundComponent,
+    DepartmentDetailComponent
   ],
   imports: [
     BrowserModule,

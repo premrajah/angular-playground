@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'department-list',
   template: `<div>
-    <h1>Hello Department List</h1>
+    <p>Department List</p>
   </div>`,
   styles: []
 })
