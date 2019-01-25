@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Zinox';
+
+  public sharedName = "Clark Kent";
+  public messageFromChild = "";
+
+
 }

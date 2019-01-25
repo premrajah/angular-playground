@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -78,9 +78,11 @@ import { Component, OnInit } from '@angular/core';
     </div>
 <hr>
     //Component Interaction
-
+    <p>Data from parent: {{fromParent}}</p>
+    <button (click)="fireEvent()"> Send to parent</button>
     
 
+<hr>    
 </div>`,
   // styleUrls: ['./test.component.sass']
   styles: [`
@@ -127,6 +129,11 @@ export class TestComponent implements OnInit {
 
   public greeting = "";
 
+  // Component Interaction
+  //@Input()public parentData; // from parent
+  @Input('parentData') public fromParent; // from parent using alias
+  @Output()public childEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -143,6 +150,10 @@ export class TestComponent implements OnInit {
 
   logMessage(value) {
     console.log(value);
+  }
+
+  fireEvent() {
+    this.childEvent.emit("I am from the Child (Test) Component");
   }
 
 }

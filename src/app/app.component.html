@@ -3,7 +3,9 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <app-test></app-test>
+  <app-test (childEvent)="messageFromChild=$event" [parentData]="sharedName"></app-test>
+  
+  <p>Message from child event:  {{messageFromChild}}</p>
 </div>
 
 
