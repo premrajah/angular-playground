@@ -1,14 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome {{ title }}!
   </h1>
   <!-- <app-test (childEvent)="messageFromChild=$event" [parentData]="sharedName"></app-test> -->
-  <app-advance></app-advance>
-  <employee-list></employee-list>
-  <employee-detail></employee-detail>
   <!-- <p>Message from child event:  {{messageFromChild}}</p> -->
 </div>
 
+<nav>
+  <a routerLink="/departments" routerLinkActive="active">Departments</a>
+  <a routerLink="/employees" routerLinkActive="active">Employees</a>
+  <a routerLink="/test" routerLinkActive="active">Test</a>
+</nav>
 
 <router-outlet></router-outlet>
