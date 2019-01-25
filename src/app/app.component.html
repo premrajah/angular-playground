@@ -3,9 +3,11 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <app-test (childEvent)="messageFromChild=$event" [parentData]="sharedName"></app-test>
-  
-  <p>Message from child event:  {{messageFromChild}}</p>
+  <!-- <app-test (childEvent)="messageFromChild=$event" [parentData]="sharedName"></app-test> -->
+  <app-advance></app-advance>
+  <employee-list></employee-list>
+  <employee-detail></employee-detail>
+  <!-- <p>Message from child event:  {{messageFromChild}}</p> -->
 </div>
 
 
