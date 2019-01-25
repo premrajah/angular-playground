@@ -80,7 +80,32 @@ import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
     //Component Interaction
     <p>Data from parent: {{fromParent}}</p>
     <button (click)="fireEvent()"> Send to parent</button>
+<hr>  
+    // Pipes
+    <div>{{pipeString}}</div>
+    <div>lowercase: {{pipeString | lowercase}}</div>
+    <div>uppercase: {{pipeString | uppercase}}</div>
+    <div>titlecase: {{pipeString | titlecase}}</div>
+    <div>slice:5: {{pipeString | slice:5}}</div>
+    <div>slice:9:14: {{pipeString | slice:9:14}}</div>
+    <div>json: {{person | json}}</div>
     
+    <div>5.678 | number:'1.2-3' = {{5.678 | number:'1.2-3'}}</div>
+    <div>5.678 | number:'3.4-5' = {{5.678 | number:'3.4-5'}}</div>
+    <div>5.678 | number:'3.1-2' = {{5.678 | number:'3.1-2'}}</div>
+
+    <div>0.25 | percent = {{ 0.25 | percent }}</div>
+
+    <div>Default: 0.25 | currency = {{ 0.25 | currency }}</div>
+    <div>GBP: 0.25 | currency: 'GBP' = {{ 0.25 | currency: 'GBP' }}</div>
+    <div>GBP: 0.25 | currency: 'GBP':'code' = {{ 0.25 | currency: 'GBP' : 'code' }}</div>
+
+    // Pipes - dates
+    <div>{{date}}</div>
+    <div>{{date | date:'short' }}</div>
+    <div>{{date | date:'shortDate' }}</div>
+    <div>{{date | date:'shortTime' }}</div>
+<hr>  
 
 <hr>    
 </div>`,
@@ -133,6 +158,14 @@ export class TestComponent implements OnInit {
   //@Input()public parentData; // from parent
   @Input('parentData') public fromParent; // from parent using alias
   @Output()public childEvent = new EventEmitter();
+
+  // Pipes
+  public pipeString = "This is a Pipe String";
+  public person = {
+    "FirstName": "Michael",
+    "LastName": "Jackson"
+  }
+  public date = new Date();
 
   constructor() { }
 
