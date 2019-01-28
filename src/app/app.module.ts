@@ -11,6 +11,8 @@ import { EmployeeDetailComponent } from './employee-files/employee-detail.compon
 import { EmployeeService } from './employee-files/employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-files/department-detail.component';
+import { DepartmentOverviewComponent } from './department-files/department-overview.component';
+import { DepartmentContactComponent } from './department-files/department-contact.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { DepartmentDetailComponent } from './department-files/department-detail.
     routingComponents,
     AdvanceComponent,
     PageNotFoundComponent,
-    DepartmentDetailComponent
+    DepartmentDetailComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,
