@@ -60,7 +60,9 @@ export class DepartmentListComponent implements OnInit {
 
   onSelect(department: any) {
     // link parameters array PATH | ROUTE PARAMETER
-    this.router.navigate(['/departments', department.id]);
+    // this.router.navigate(['/departments', department.id]);
+
+    this.router.navigate([department.id], { relativeTo: this.route });
   }
 
 
